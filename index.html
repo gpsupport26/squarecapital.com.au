@@ -2,85 +2,33 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coming Soon</title>
+  <title>Landing</title>
 
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      font-family: sans-serif;
     }
 
     body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-
-      /* FULLSCREEN BACKGROUND */
+      /* Fullscreen background image */
       background: url("banner.jpg") no-repeat center center;
       background-size: cover;
+
+      /* Prevent scroll on most screens */
+      overflow: hidden;
     }
 
-    .content {
-      padding: 30px 40px;
-      border-radius: 10px;
-
-      /* subtle overlay only behind text */
-      background: linear-gradient(
-        rgba(0,0,0,0.45),
-        rgba(0,0,0,0.2)
-      );
-
-      max-width: 90%;
-    }
-
-    h1 {
-      font-size: clamp(28px, 6vw, 52px);
-      margin: 0;
-      letter-spacing: 2px;
-    }
-
-    p {
-      font-size: clamp(14px, 2vw, 18px);
-      margin-top: 12px;
-      letter-spacing: 3px;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 12px 30px;
-      border: 1px solid white;
-      border-radius: 6px;
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-      transition: all 0.3s ease;
-    }
-
-    .button:hover {
-      background: white;
-      color: black;
-    }
-
-    /* Optional: adjust focal point for mobile */
+    /* Improve mobile rendering */
     @media (max-width: 768px) {
       body {
-        background-position: 60% center;
+        background-position: 65% center; /* keeps subject visible */
       }
     }
   </style>
 </head>
 
 <body>
-
-  <div class="content">
-
-    <a href="#" class="button">Coming Soon</a>
-  </div>
-
 </body>
 </html>
