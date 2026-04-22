@@ -8,27 +8,54 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
     }
 
     body {
-      /* Fullscreen background image */
+      min-height: 100vh;
+      min-height: 100dvh;
+
+      /* Background image */
       background: url("banner.jpg") no-repeat center center;
       background-size: cover;
-
-      /* Prevent scroll on most screens */
-      overflow: hidden;
     }
 
-    /* Improve mobile rendering */
+    /* LOGO */
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+
+    .logo img {
+      width: 120px;
+      height: auto;
+    }
+
+    /* Mobile adjustments */
     @media (max-width: 768px) {
       body {
-        background-position: 65% center; /* keeps subject visible */
+        background-position: 65% center;
+      }
+
+      .logo img {
+        width: 90px;
+      }
+
+      .logo {
+        top: 15px;
+        left: 15px;
       }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- ADD YOUR LOGO FILE HERE -->
+  <div class="logo">
+    <img src="sq.png" alt="Logo">
+  </div>
+
 </body>
 </html>
