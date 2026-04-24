@@ -8,18 +8,20 @@
     html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
     }
 
-    body {
-      min-height: 100vh;
-      min-height: 100dvh;
-
-      /* Background image */
-      background: url("Banner1.png") no-repeat center center;
-      background-size: cover;
+    /* Background layer */
+    .bg {
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
+        url("banner.jpg") center / cover no-repeat;
+      z-index: -1;
     }
 
-    /* LOGO */
+    /* Logo */
     .logo {
       position: absolute;
       top: 20px;
@@ -32,19 +34,21 @@
       height: auto;
     }
 
-    /* Mobile adjustments */
+    /* Mobile version */
     @media (max-width: 768px) {
-      body {
-        background-position: 65% center;
-      }
-
-      .logo img {
-        width: 90px;
+      .bg {
+        background:
+          linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
+          url("mobile.png") center / cover no-repeat;
       }
 
       .logo {
         top: 15px;
         left: 15px;
+      }
+
+      .logo img {
+        width: 90px;
       }
     }
   </style>
@@ -52,7 +56,10 @@
 
 <body>
 
-  <!-- ADD YOUR LOGO FILE HERE -->
+  <!-- Background -->
+  <div class="bg"></div>
+
+  <!-- Logo -->
   <div class="logo">
     <img src="sq.png" alt="Logo">
   </div>
